@@ -1,0 +1,92 @@
+<app-alert *ngIf="toggleAlert" [msg]="errorMsg" [color]="alertColor"></app-alert>
+<div class="login-wrap">
+  <div class="login-html">
+    <label for="tab-1" class="tab">Sign Up</label>
+    <div class="login-form">
+      <div class="sign-up-htm">
+        <form [formGroup]="signUpForm" (ngSubmit)="submitForm(signUpForm)">
+        <div class="group">
+          <label for="email" class="label">Email</label>
+          <input id="email" type="text" class="input" formControlName="email"
+          [ngClass]="
+          formControl?.email?.invalid &&
+          (formControl?.email?.touched || formControl?.email?.dirty)
+            ? 'invalid'
+            : ''"
+            required
+          />
+          <span class="help-block"
+          *ngIf="
+            formControl?.email?.invalid &&
+            (formControl?.email?.touched || formControl?.email?.dirty)
+          "
+        >
+          <span class="help-block" *ngIf="formControl?.email?.errors?.required">
+            Email Is Required
+          </span>
+          <span class="help-block" *ngIf="formControl?.email?.errors?.pattern">
+            Enter valid email(abc@abc.abc)
+          </span>
+        </span>
+        </div>
+        <div class="group">
+          <label for="firstName" class="label">First Name</label>
+          <input id="firstName" type="text" class="input" formControlName="firstName"
+          [ngClass]="formControl?.firstName?.invalid &&
+          (formControl?.firstName?.touched || formControl?.firstName?.dirty) ? 'invalid' : '' " required />
+          <span class="help-block" *ngIf=" formControl?.firstName?.invalid && (formControl?.firstName.touched || formControl?.firstName?.dirty)">
+            <span class="help-block" *ngIf="formControl?.firstName?.errors?.required">First Name is required</span>
+            <span class="help-block" *ngIf="formControl?.firstName?.errors?.maxlength">First Name must not exceed 15 characters</span>
+          </span>
+        </div>
+        <div class="group">
+          <label for="lastName" class="label">Last Name</label>
+          <input id="lastName" type="text" class="input" formControlName="lastName"
+          [ngClass]="formControl?.lastName?.invalid &&
+          (formControl?.lastName?.touched || formControl?.lastName?.dirty) ? 'invalid' : '' " required />
+          <span class="help-block" *ngIf=" formControl?.lastName?.invalid && (formControl?.lastName?.touched || formControl?.lastName?.dirty)">
+            <span class="help-block" *ngIf="formControl?.lastName?.errors?.required">Last Name is required</span>
+            <span class="help-block" *ngIf="formControl?.lastName?.errors?.maxlength">Last Name must not exceed 15 characters</span>
+          </span>
+        </div>
+        <div class="group">
+          <label for="pass" class="label">Password</label>
+          <input id="pass" type="password" class="input" data-type="password" formControlName="password"
+          [ngClass]="formControl?.password?.invalid &&
+          (formControl?.password?.touched || formControl?.password?.dirty) ? 'invalid' : '' " required />
+        <span class="help-block" *ngIf=" formControl?.password?.invalid && (formControl?.password?.touched || formControl?.password?.dirty)">
+          <span class="help-block" *ngIf="formControl?.password?.errors?.required">Password is required</span>
+          <span class="help-block" *ngIf="formControl?.password?.errors?.minlength">Password must be of minimum 7 characters</span>
+        </span>
+        </div>
+        <div class="group">
+          <label for="address" class="label">Address</label>
+          <input id="address" type="text" class="input" formControlName="address"
+          [ngClass]="formControl?.address?.invalid && (formControl?.address?.touched || formControl?.address?.dirty) ?
+          'invalid' : '' " required/>
+          <span class="help-block" *ngIf="formControl?.address?.invalid && (formControl?.address?.touched || formControl?.address?.dirty)">
+            Address is required
+          </span>
+        </div>
+        <div class="group">
+          <label for="dob" class="label">Date Of Birth</label>
+          <input id="dob" type="date" class="input" date-type="date" formControlName="dob"
+          [ngClass]="formControl?.dob?.invalid && (formControl?.dob?.touched || formControl?.dob?.dirty) ?
+          'invalid' : ''" required />
+          <span class="help-block" *ngIf=" formControl?.dob?.invalid && (formControl?.dob?.touched || formControl?.dob?.dirty)">
+            <span class="help-block" *ngIf="formControl?.dob?.errors?.required">DOB is required</span>
+            <span class="help-block" *ngIf="formControl?.dob?.errors?.dateIsInvalid">DOB must not be greater than toady</span>
+          </span>
+        </div>
+        <div class="group">
+          <button type="submit" class="button">SIGN UP</button>
+        </div>
+        <div class="hr"></div>
+        <div class="foot-lnk">
+          <a routerLink="../sign-in">Already Member?SIGN IN</a>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

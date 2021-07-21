@@ -1,0 +1,69 @@
+{
+  "employee": [
+    {
+      "firstName": "Gyanswarup",
+      "lastName": "Mohanty",
+      "address": "Flat no-F206, Pan Oasis Appartments",
+      "dob": "2021-07-03",
+      "mobile": "8249295946",
+      "city": "Noida",
+      "id": 3
+    }
+  ],
+  "manager": [
+    {
+      "email": "gyani1993@gmail.com",
+      "firstName": "Gyanswarup",
+      "lastName": "Mohanty",
+      "password": "R3lhbmlAMDA3",
+      "address": "Flat no-F206, Pan Oasis Appartments",
+      "dob": "2021-07-13",
+      "id": 1
+    },
+    {
+      "email": "ankit@gmail.com",
+      "firstName": "Ankit",
+      "lastName": "Sharma",
+      "password": "QW5raXRAMTIz",
+      "address": "Flat no-F206, Pan Oasis Appartments",
+      "dob": "2021-07-04",
+      "id": 2
+    },
+    {
+      "email": "gyani1998@gmail.com",
+      "firstName": "Gyanswarup",
+      "lastName": "Mohanty",
+      "password": "R3luYWlAMDA3",
+      "address": "Flat no-F206, Pan Oasis Appartments",
+      "dob": "2021-07-02",
+      "id": 3
+    },
+    {
+      "email": "gyani1993@gmail.co.in",
+      "firstName": "Gyanswarup",
+      "lastName": "Mohanty",
+      "password": "enhjIHh6bWN4eg==",
+      "address": "Flat no-F206, Pan Oasis Appartments",
+      "dob": "2021-07-02",
+      "id": 4
+    },
+    {
+      "email": "gyani1793@gmail.com",
+      "firstName": "Gyanswarup",
+      "lastName": "Mohanty",
+      "password": "a21jamRrZA==",
+      "address": "Flat no-F206, Pan Oasis Appartments",
+      "dob": "2021-07-16",
+      "id": 5
+    },
+    {
+      "email": "gyani193@gmail.com",
+      "firstName": "Gyanswarup",
+      "lastName": "Mohanty",
+      "password": "Z3lzeWRoeQ==",
+      "address": "Flat no-F206, Pan Oasis Appartments",
+      "dob": "2021-07-14",
+      "id": 6
+    }
+  ]
+}
