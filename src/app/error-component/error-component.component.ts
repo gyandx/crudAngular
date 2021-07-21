@@ -8,7 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ErrorComponent implements OnInit {
 
-  errorText: string;
+  errorText: string = "Page Not Found";
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
